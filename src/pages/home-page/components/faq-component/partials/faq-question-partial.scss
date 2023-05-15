@@ -7,6 +7,7 @@
     padding: 24px 32px;
     background-color: var(--background-color);
     transition: 0.2s;
+    width: calc(100vw - 32px);
 
     &:not(:first-of-type) {
         margin-top: 8px;
@@ -25,7 +26,7 @@
     }
 
     & &__title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.2em;
         font-weight: 700;
     }
@@ -42,7 +43,7 @@
     & &__paragraph {
         line-height: 1.6em;
         letter-spacing: -0.01em;
-        font-size: 16px;
+        font-size: 14px;
         margin-block: 0;
 
         &:not(:first-of-type) {
@@ -53,7 +54,7 @@
     &[data-question-expanded] {
         background-color: var(--background-color-primary-hover);
         border-color: var(--primary-color);
-        
+
         .faq-question-partial__answer {
             margin-top: 24px;
             max-height: var(--faq-answer-height);
@@ -100,6 +101,25 @@
             width: 100%;
         }
     }
+}
 
+@media screen and (min-width: 376px) {
+    .faq-question-partial {
+        width: calc(100vw - 62px);
+
+        &__title {
+            font-size: 18px;
+        }
+
+        & &__paragraph {
+            font-size: 16px;
+        }
     
+    }
+}
+
+@media screen and (min-width: 835px) {
+    .faq-question-partial {
+        width: 100%;    
+    }
 }

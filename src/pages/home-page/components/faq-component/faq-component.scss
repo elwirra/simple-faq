@@ -1,6 +1,43 @@
 @use './partials/faq-question-partial.scss';
 
 .faq-component {
+    padding: 16px;
 
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 40px;
+        padding: 0 20%;
+        line-height: 1em;
+    }
 }
 
+@media screen and (min-width: 376px) {
+    .faq-component {
+        padding: 31px;
+
+        &__title {
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 833px) {
+    .faq-component {
+        &__title {
+            padding: 0 30%;
+        }
+    }
+}
+
+@media screen and (min-width: 1439px) {
+    .faq-component {
+        width: 833px;
+    }
+}
